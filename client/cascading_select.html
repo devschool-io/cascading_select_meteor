@@ -1,0 +1,23 @@
+<head>
+  <title>cascading_select</title>
+</head>
+
+<body>
+  <h1>Cascading select example</h1>
+  {{> cascade}}
+</body>
+
+<template name="cascade">
+  <select id="brands">
+    <option value="">Select Brand</option>
+    {{#each brands}}
+      <option value="{{name}}">{{name}}</option>
+    {{/each}}
+  </select> 
+  <select id="models">
+    <option value="">Select Model</option>
+    {{#each models}}
+      <option value="{{name}}">{{name}}</option>
+    {{/each}}
+  </select> 
+</template>
